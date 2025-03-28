@@ -1,0 +1,41 @@
+* {
+  background-color: #0000ff;
+}
+
+h1 {
+  color: #ffd700;
+  text-align: center;
+}
+
+figcaption {
+  color: #ffff;
+}
+
+.gallery img {
+  /* width: calc(); */
+  max-width: 300px;
+  height: auto;
+ 
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  
+  /* grid-template-columns: repeat(3,1fr); */
+}
+
+@media screen and (max-width:767px) {
+  .gallery {
+    display: block !important;
+  }
+
+  .gallery img {
+    margin-bottom: 10px;
+    display: block !important;
+    width: 100% !important;
+    height: auto;
+  }
+}

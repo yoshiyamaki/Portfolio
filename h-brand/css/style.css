@@ -1,0 +1,368 @@
+body {
+  width: 1080px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #f8f8f8;
+  text-align: center; /* 全体を中央寄せ */
+}
+
+img {
+  width: 100%;
+  }
+
+/* ナビゲーションのリンクの装飾設定 */
+
+/* ヘッダー */
+header {
+  display: flex;
+  justify-content: space-between;
+  } 
+  /* ナビゲーションのレイアウト */
+  #nav-pc {
+   font-size: 14px;
+  }
+  
+  #nav-pc ul {
+   display: flex;
+   padding-left: 0;
+  }
+  
+  #nav-pc li {
+   list-style: none;
+  }
+  
+  /* ナビゲーションのリンクの装飾設定 */
+  #nav-pc a {
+   text-decoration: none;
+   margin-left: 20px;
+   color: #0d0d0d;
+  }
+  
+  #nav-pc a:hover {
+   text-decoration: underline;
+  }
+
+ /* メインビジュアル */
+ /* .phone-1 img { 
+  width: 600px;
+ }
+
+ .phone-2 img {
+  width: 600px;
+ }*/
+
+ .main-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto; /* 上下に余白をつける */
+}
+
+.phone {
+  position: relative;
+  animation: move 3s ease-in-out infinite;
+}
+
+.phone-1 {
+  z-index: 2; /* 前面に表示 */
+  animation-delay: 0s;
+}
+
+.phone-2 {
+  z-index: 1; /* 背面に表示 */
+  animation-delay: 1.5s;
+}
+
+.phone-1 img,
+.phone-2 img {
+  width: 600px; /* 画像を大きくする */
+}
+
+.phone-1 img {
+  margin-right: -300px; /* スレスレになるように調整 */
+}
+
+.phone-2 img {
+  margin-left: -300px; /* スレスレになるように調整 */
+}
+
+@keyframes move {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+}
+
+.flexbox-container-first {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: lightcyan;
+}
+
+.flexbox-item {
+  padding: 5px;
+  margin: 5px;
+  background-color: #00ced1;
+}
+
+.flexbox-container-second {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: lightcyan;
+}
+
+.flexbox-container-third {
+  display: flex;
+  flex-flow: wrap;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: lightcyan;
+}
+
+.flexbox-container-force {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: lightcyan;
+}
+
+.flexbox-container-fifth {
+  display: flex;
+  align-items: flex-end;
+  height: 200px;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: lightcyan;
+}
+
+.flexbox-container-sixth #item02 {
+  font-size: 28px;
+}
+
+.flexbox-container-sixth {
+  display: flex;
+  align-items: baseline;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: lightcyan;
+}
+
+.flexbox-container-seveenth {
+  display: flex;
+  align-items: baseline;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: lightcyan;
+}
+
+.flexbox-container-eighth {
+  display: flex;
+  align-items: baseline;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: lightcyan;
+}
+
+ /* 会社概要 */
+ #company-table {
+  width: 100%;
+  border-collapse: collapse; /* 枠線の二重線をなくす */
+}
+
+.tableheader {
+  text-align: left;
+  padding: 20px;
+  border-bottom: 1px solid #2710d5;
+  width: 150px; /* 幅を固定（調整可能） */
+}
+
+.cell {
+  text-align: left; /* 追加: セルの中身も左揃え */
+  padding: 20px;
+  border-bottom: 1px solid #ececec;
+}
+ #company {
+  margin: 80px auto 80px auto;
+}
+
+
+
+
+.tableheader-first {
+  border-top-color: #2710d5;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+
+
+.cell-first {
+  border-top-color: #ececec;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+#company > iframe {
+  width: 100%;
+  height: 368px;
+  margin-top: 40px;
+}
+
+/* 電話番号アニメーション */
+.phone-number {
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffd700;
+  color: #191970;
+  border-radius: 8px;
+  animation: stretch 1.5s infinite ease-in-out;
+}
+
+@keyframes stretch {
+  0% {
+      transform: scaleX(1);
+  }
+  50% {
+      transform: scaleX(1.3);
+  }
+  100% {
+      transform: scaleX(1);
+  }
+}
+
+/* お問い合わせフォーム全体を左寄せ */
+#contact {
+  margin: 80px auto;
+}
+
+#form {
+  max-width: 600px; /* フォームの幅を適切に制限 */
+  margin-left: 0; /* 左寄せ */
+  padding: 20px;
+}
+
+/* 各入力フィールドを左寄せ */
+#contact > form > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start; /* 左寄せ */
+  padding-bottom: 30px;
+}
+
+/* 左列の見出し */
+.contact-heading {
+  width: 240px;
+  align-self: flex-start; /* 左寄せ */
+  text-align: left; /* 見出しのテキストも左揃え */
+}
+
+/* 見出しのラベル */
+.contact-label {
+  font-weight: bold;
+}
+
+/* 必須マーク */
+.contact-span {
+  color: #ce2222;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+/* 入力欄（テキストボックス） */
+.contact-textbox {
+  border: none;
+  border-bottom: 1px solid #707070;
+  background-color: #fafafa;
+  width: 100%; /* 幅を100%にして統一 */
+  max-width: 400px; /* 入力欄の最大幅 */
+  height: 56px;
+  padding: 10px;
+}
+
+/* お問い合わせ内容のテキストエリア */
+.contact-textarea {
+  border: none;
+  border-bottom: 1px solid #707070;
+  background-color: #fafafa;
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  padding: 10px;
+}
+
+/* ラジオボタンを左寄せ */
+.radiobutton {
+  margin-right: 10px;
+}
+
+/* 個人情報の取り扱い */
+#contact dt {
+  font-weight: bold;
+}
+
+#contact dd {
+  margin-bottom: 16px;
+}
+
+#contact dd p {
+  margin: 0;
+}
+
+#contact dd ul {
+  padding-left: 0;
+}
+
+#contact dd li {
+  margin-bottom: 0;
+  list-style: none;
+}
+
+/* チェックボックスの調整 */
+#agree {
+  margin-right: 10px;
+}
+
+/* 送信ボタンを左寄せ */
+#submit {
+  display: block;
+  margin-left: 0;
+}
+
+/* お問い合わせボタン */
+.inquiry {
+  display: flex;
+  justify-content: center;
+}
+#back-btn {
+  display: none;
+  padding: 15px 40px;
+  background-color: #ffd700;
+  color: #191970;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  position: fixed;
+  bottom: 10px;
+}
+
+@media screen and (max-width: 766px) {
+  .main-visual {
+    max-width: 100%;
+  }
+}
+
+
